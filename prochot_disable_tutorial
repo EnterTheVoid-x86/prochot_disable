@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "These are your BD PROCHUT Register values:"
+sudo rdmsr -a -d 0x1FC
+echo "edit prochot_disable's write command to have this value subtracted by 1."
+echo "example:"
+echo "BD PROCHOT Register Variable:"
+echo "2883677"
+echo "2883677"
+echo "2883677"
+echo "2883677"
+echo "Command: sudo wrmsr 0x1FC 2883676"

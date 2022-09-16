@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "BD PROCHOT Register Variable:"
+sudo rdmsr -a -d 0x1FC
+echo "Setting Register to disable BD PROCHOT..."
+sudo wrmsr 0x1FC 2883676
