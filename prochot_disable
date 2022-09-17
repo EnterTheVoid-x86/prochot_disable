@@ -1,7 +1,7 @@
 #!/bin/sh
 if [ "$(whoami)" = "root" ]; then
   echo "Setting Register to disable BD PROCHOT..."
-  wrmsr 0x1FC "$(expr "$(rdmsr -a -d 0x1FC)" - 1)"
+  wrmsr 0x1FC "$(expr "$(rdmsr -a -d 0x1FC | head -n 1)" - 1)"
 else
   echo "Please run this script as root."
   exit 1
